@@ -1,6 +1,6 @@
 import javax.swing.*;
 import java.awt.event.*;//this enables events
-
+import java.awt.*;
 public class Main
 {
   public static void main(String args[])
@@ -11,7 +11,8 @@ public class Main
     frame1.setSize(500,500);
     frame1.setVisible(true);
 
-    
+    //PAnel to HOLD THE BUTTONS
+    JPanel panel1 = new JPanel(new GridLayout(2,2, 20, 20));
 
     //Button
     JButton button1 = new JButton("Click me");
@@ -33,8 +34,8 @@ public class Main
       }//end what button does
     });//end the action listener
 
-    frame1.add(button1);
-    frame1.add(button2);
-    frame1.setVisible(true);
+    panel1.add(button1);
+    panel1.add(button2);
+    frame1.getContentPane().add(panel1);
   }//end main method
 }//end class Main
